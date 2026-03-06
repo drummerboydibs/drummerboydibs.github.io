@@ -1,21 +1,192 @@
-body {
-    background-color: #e4fde1;
+/* =============================================
+TABLE OF CONTENTS
+1. CSS Variables (design tokens)
+2. Reset / Base
+3. Typography
+4. Layout
+5. Components
+6. Utilities
+ ============================================== */
+
+/* =============================================
+1. CSS VARIABLES
+ ============================================== */
+:root {
+    --color-black: #000000;
+    --color-mint: #e4fde1;
+    --color-slate: #4e578b;
+    --color-orange: #f89009;
+    --color-terracotta: #bb4430;
+    --color-teal: #7ebdc2;
+    --color-muted: #555;
+
+    --font-body: 'Roboto Mono', monospace;
+    --font-heading: 'Courier Prime', monospace;
 }
 
+/* =============================================
+2. RESET / BASE
+ ============================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-mint);
+    font-family: var(--font-body);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =============================================
+3. TYPOGRAPHY
+ ============================================== */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+}
+
+/* =============================================
+4. LAYOUT
+ ============================================== */
 header {
-    background-color: #4e578b;
+    background-color: var(--color-black);
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
-.header_logo {
-    height: 60px;
+footer {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* =============================================
+5. COMPONENTS
+ ============================================== */
+.header-logo {
+    height: 8rem;
     width: auto;
+    filter:brightness(0) invert(1);
 }
 
-.hero_logo {
+.hero {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 2rem;
+}
+
+.hero-logo {
     height: 300px;
     width: auto;
+    mix-blend-mode: multiply;
 }
+
+.music-card {
+    flex: 1;
+    min-width: 220px;
+    background-color: var(--color-black);
+    color: var(--color-mint);
+    padding: 1.5rem;
+    border-radius: 4px;
+    border-top: 4px solid var(--color-orange);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+.music-card .album-title {
+    color: var(--color-mint);
+    margin: 1rem 0 0.25rem 0;
+}
+
+.music-card .music-credit {
+    color: var(--color-teal);
+    margin: 0 0 1rem 0;
+    font-size: 0.85rem;
+}
+
+.music-album-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+}
+
+.music-streaming-link {
+    height: 24px;
+    width: auto;
+    display: inline-block;
+    margin-right: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.music-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.music-hero {
+    height: 500px;
+    background-image: url('../assets/images/drumming-pic.jpg');
+    background-size: cover;
+    background-position: center 30%;
+}
+
+
+nav a {
+    color: #ffffff;
+    font-style: normal;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    text-decoration: none;
+}
+
+.portfolio-grid {
+    display: flex;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.portfolio-card {
+    flex: 1;
+    padding: 1.5rem 2rem;
+    border-left: 4px solid #f89009;
+}
+
+.portfolio-card h1 {
+    margin: 0 0 0 .5rem;
+}
+
+.portfolio-card p {
+    margin: 0;
+    color: var(--color-muted);
+}
+
+.portfolio-hero {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 2rem;
+}
+
+
+/* =============================================
+6. UTILITIES
+ ============================================== */
+
+
+
+
+

@@ -12,24 +12,27 @@ TABLE OF CONTENTS
 1. CSS VARIABLES
  ============================================== */
 :root {
-    --color-bg:          #f7f5f0;
-    --color-surface:     #ffffff;
-    --color-header:      #2c3560;
-    --color-navy:        #2c3560;
-    --color-orange:      #f89009;
-    --color-terracotta:  #bb4430;
-    --color-teal:        #7ebdc2;
-    --color-text:        #1a1a2e;
-    --color-muted:       #6b6b6b;
-    --color-black:       #000000;
+    --color-bg: #f7f5f0;
+    --color-surface: #ffffff;
+    --color-header: #2c3560;
+    --color-navy: #2c3560;
+    --color-orange: #f89009;
+    --color-terracotta: #bb4430;
+    --color-teal: #7ebdc2;
+    --color-text: #1a1a2e;
+    --color-muted: #6b6b6b;
+    --color-black: #000000;
 
-    --font-body:         'Roboto Mono', monospace;
-    --font-heading:      'Courier Prime', monospace;
+    --font-body: 'Roboto Mono', monospace;
+    --font-heading: 'Courier Prime', monospace;
 }
+
 /* =============================================
 2. RESET / BASE
  ============================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -48,7 +51,9 @@ img {
 /* =============================================
 3. TYPOGRAPHY
  ============================================== */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--font-heading);
 }
 
@@ -77,10 +82,19 @@ footer {
 /* =============================================
 5. COMPONENTS
  ============================================== */
+.coming-soon {
+    font-size: 0.75rem;
+    color: var(--color-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.75rem;
+    display: block;
+}
+
 .header-logo {
     height: 8rem;
     width: auto;
-    filter:brightness(0) invert(1);
+    filter: brightness(0) invert(1);
 }
 
 .hero {
@@ -98,12 +112,11 @@ footer {
 .music-card {
     flex: 1;
     min-width: 220px;
-    
-    color: var(--color-mint);
+    color: var(--color-text);
     padding: 1.5rem;
     border-radius: 4px;
     border-top: 4px solid var(--color-orange);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .music-card .album-title {
@@ -173,6 +186,11 @@ nav a {
     text-decoration: none;
 }
 
+.portfolio-card--inactive {
+    opacity: 0.6;
+    cursor: default;
+}
+
 .portfolio-card h1 {
     margin: 0 0 0 .5rem;
 }
@@ -188,8 +206,3 @@ nav a {
 /* =============================================
 6. UTILITIES
  ============================================== */
-
-
-
-
-

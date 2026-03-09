@@ -62,6 +62,8 @@ h3 {
  ============================================== */
 header {
     background-color: var(--color-header);
+    display: flex;
+    flex-wrap: flex;
     border-bottom: 3px solid var(--color-orange);
     padding: 1rem 2rem;
     display: flex;
@@ -94,6 +96,7 @@ footer {
 .header-logo {
     height: 8rem;
     width: auto;
+    min-width: 224px;
     filter: brightness(0) invert(1);
 }
 
@@ -107,6 +110,12 @@ footer {
     height: 300px;
     width: auto;
     mix-blend-mode: multiply;
+}
+
+.music-album-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
 }
 
 .music-card {
@@ -129,19 +138,7 @@ footer {
     font-size: 0.85rem;
 }
 
-.music-album-cover {
-    width: 100%;
-    height: auto;
-    border-radius: 2px;
-}
 
-.music-streaming-link {
-    height: 24px;
-    width: auto;
-    display: inline-block;
-    margin-right: 0.75rem;
-    margin-top: 0.5rem;
-}
 
 .music-grid {
     display: flex;
@@ -159,23 +156,23 @@ footer {
     background-position: center 30%;
 }
 
+.music-streaming-link {
+    height: 24px;
+    width: auto;
+    display: inline-block;
+    margin-right: 0.75rem;
+    margin-top: 0.5rem;
+}
 
 nav a {
     color: var(--color-surface);
     font-style: normal;
+    font-size: 1.1rem;
     padding-left: .5rem;
     padding-right: .5rem;
     text-decoration: none;
 }
 
-.portfolio-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 2rem;
-}
 
 .portfolio-card {
     flex: 1;
@@ -200,6 +197,14 @@ nav a {
     color: var(--color-muted);
 }
 
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
 
 
 
